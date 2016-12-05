@@ -15,4 +15,4 @@ for f in files:
                 output_dict[word] += 1
 
 for key in output_dict:
-    output_file.write("{}, {}".format(key, output_dict[key]))
+    output_file.write("{}, {}\n".format(key, output_dict[key]))
