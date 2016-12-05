@@ -6,6 +6,7 @@ output_dict = {}
 
 for f in files:
     inp = open("data/{}".format(f), 'r')
+    print("File = {}".format(inp))
     for line in inp.readline():
         for word in line.split():
             if word in output_dict:
