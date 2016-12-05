@@ -28,7 +28,7 @@ class Introducer():
     def introduce(self):
         joiner_address = self.wait_for_join()
         send_message('a{}'.format(joiner_address), self.member_list)
-        self.send_state(joiner_address[0])
+        self.send_state(joiner_address)
 
     def shutdown(self):
         self.server_socket.close()
