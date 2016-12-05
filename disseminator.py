@@ -6,8 +6,8 @@ def send_message(message, machines, port=listener_port):
     for machine in machines:
         tcp_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         try:
-            machine_address = (machine, port)
-            tcp_socket.connect(machine_address)
+            # machine_address = ()
+            tcp_socket.connect(machine, port)
             tcp_socket.sendall(message)
             # response = executor.recv(len(execution_ack_string))
             # print("Message to {}. Responded with {}".format(machine_address,response))
