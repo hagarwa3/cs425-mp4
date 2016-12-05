@@ -20,5 +20,6 @@ if __name__ == "__main__":
         exit(1)
 
     order = " ".join(sys.argv[1:])
+    order = 'm'+order
     print("Will send order: {}".format(order))
     send_message(order, target_machines) # TODO
