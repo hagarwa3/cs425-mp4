@@ -14,5 +14,5 @@ for f in files:
             else:
                 output_dict[word] += 1
 
-for k,v in output_dict:
-    output_file.write("{}, {}\,".format(k, v))
+for key in output_dict:
+    output_file.write("{}, {}".format(key, output_dict[key]))
