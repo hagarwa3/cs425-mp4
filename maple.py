@@ -1,6 +1,7 @@
 # Map
 from config import *
 from disseminator import *
+import os
 
 
 class Maple():
@@ -11,7 +12,7 @@ class Maple():
 
     def start(self, maple_args):
         print("Maple start with: {}".format(maple_args))
-        # start the maple exe
+        os.system(maple_args)
 
 if __name__ == "__main__":
     if len(sys.argv) == 1:
