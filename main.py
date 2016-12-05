@@ -53,10 +53,10 @@ def main(is_introducer = False):
     detector_thread = threading.Thread(target=detector_runner)
     detector_thread.start()
 
+    join_group()
+
     listener_thread.join()
     detector_thread.join()
-
-    join_group()
 
 if __name__ == "__main__":
     if len(sys.argv) == 1:
