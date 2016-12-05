@@ -36,7 +36,7 @@ class Listener():
             if joiner_address in self.member_list:
                 return
             else:
-                self.member_list.append(joiner_address)
+                self.member_list.append(joiner_address[])
                 self.member_list.sort()
 
         elif order[0] == 'r':

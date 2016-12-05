@@ -37,4 +37,13 @@ class Detector():
     def ping_neighbors(self):
         global ping_message
         print(self.member_list)
-        send_message(ping_message, self.member_list)
+        neighbors = self.get_neighbors()
+        for neighbor in neighbors:
+            listener = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            try:
+                listener.connect((neighbor, listener_port))
+                listener.sendall(ping_message)
+                listener.close()
+            except socket.error:
+                send_message("r{}".format(neighbor), self.member_list)
+
