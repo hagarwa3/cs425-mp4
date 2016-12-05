@@ -9,7 +9,7 @@ for f in files:
     print("File = {}".format(inp))
     for line in inp.readlines():
         for word in line.split():
-            if word in output_dict:
+            if word not in output_dict:
                 output_dict[word] = 1
             else:
                 output_dict[word] += 1
