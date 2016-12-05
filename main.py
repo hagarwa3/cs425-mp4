@@ -35,7 +35,7 @@ def introducer_runner():
     member_list.append(socket.gethostbyname(socket.gethostname()))
     itroducer_server = Introducer(member_list)
     while keep_running:
-        introducer_server.introduce()
+        itroducer_server.introduce()
 
 def main(is_introducer = False):
     global member_list, keep_running
