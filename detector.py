@@ -37,7 +37,7 @@ class Detector():
     def ping_neighbors(self):
         global ping_message
         print(self.member_list)
-        neighbors = self.get_neighbors()
+        neighbors = self.get_neighbours()
         for neighbor in neighbors:
             listener = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             try:
