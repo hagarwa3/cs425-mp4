@@ -29,6 +29,7 @@ class Detector():
         return neighbors
     
     def ping_neighbors(self):
+        global ping_message
         print(self.member_list)
         ping_message= length_padder(len(ping_message)) + ping_message
         send_message(ping_message, self.member_list)

@@ -27,6 +27,7 @@ class Listener():
         return data
 
     def parse_order(self, order):
+        global ping_message
         if order == ping_message:
             return
 
