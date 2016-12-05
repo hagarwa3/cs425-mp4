@@ -7,7 +7,7 @@ class Detector():
         self.member_list = member_list
         self.name = socket.gethostbyname(socket.gethostname())
 
-    def get_neighbours(self:
+    def get_neighbours(self):
         index = None
         try:
             index = self.member_list.index(self.name)
@@ -23,7 +23,7 @@ class Detector():
         
         neighbors = set()
         neighbors.add(self.member_list[index-2])
-        neighbors.add(self.member_list[index-1])
+        neighbors.add(self.member_list[index-1]) 
         neighbors.add(self.member_list[index+1])
         neighbors.add(self.member_list[index+2])
         return neighbors
