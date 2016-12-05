@@ -23,7 +23,7 @@ class Introducer():
 
     def send_state(self, joiner_address):
         for member in self.member_list:
-            send_message('a{}'.format(member), [joiner_address])
+            send_message('a{}'.format(member), [joiner_address[0]])
 
     def introduce(self):
         joiner_address = self.wait_for_join()
