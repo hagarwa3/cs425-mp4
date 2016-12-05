@@ -24,6 +24,7 @@ class Listener():
         connection, sender_address = self.server_socket.accept()
         print("Message Recieved from {}".format(sender_address))
         data = connection.recv(200)
+        print("Message = {}".format(data))
         return data
 
     def parse_order(self, order):
