@@ -12,7 +12,7 @@ class Maple():
 
     def start(self, maple_args):
         print("Maple start with: {}".format(maple_args))
-        os.system(maple_args)
+        os.system(maple_args + " " + self.member_list.index[self.name])
 
 if __name__ == "__main__":
     if len(sys.argv) == 1:

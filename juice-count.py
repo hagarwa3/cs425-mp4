@@ -1,4 +1,5 @@
 import os
+import sys
 
 files = os.listdir("data/")
 output_file = open('output_j.txt', "w")
@@ -6,7 +7,7 @@ output_dict = {}
 
 for f in files:
     inp = open("data/{}".format(f), 'r')
-    print("File = {}".format(inp))
+    # print("File = {}".format(inp))
     for line in inp.readlines():
         for word in line.split():
             if word not in output_dict:

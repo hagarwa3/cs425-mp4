@@ -12,7 +12,7 @@ class Juice():
 
     def start(self, juice_args):
         print("Juice start with: {}".format(juice_args))
-        os.system(juice_args)
+        os.system(juice_args + " " + self.member_list.index[self.name])
         # start the maple exe
 
 if __name__ == "__main__":
